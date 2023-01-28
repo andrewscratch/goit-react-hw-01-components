@@ -2,10 +2,10 @@ import upcomingData from '../../components/data.json';
 import { StatisticsWrapper, Title } from './Statistics.styled';
 import { StatisticsList } from './StatisticsList/StatisticsList';
 import PropTypes from 'prop-types'
-export const Statistics = () => {
+export const Statistics = ({title}) => {
     return (
         <StatisticsWrapper>
-            <Title>UPLOAD STATS</Title>
+            {title && <Title>{title}</Title>}
             <StatisticsList data={upcomingData} />
         </StatisticsWrapper>
     );
